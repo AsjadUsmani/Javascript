@@ -26,10 +26,13 @@ const newStringOne = "   asjad    "
 console.log(newStringOne);
 console.log(newStringOne.trim());
 
-const url = "https://asjad.com/asjad%20choudhary"
+const url = "https://asjad.com/asjad%20usmani"
 
 console.log(url.replace('%20', '-'))
 
 console.log(url.includes('sundar'))
 
 console.log(gameName.split('-'));
+
+let primitiveString = gameName.valueOf();
+console.log(`primitive string: ${primitiveString} which is not an object`);
