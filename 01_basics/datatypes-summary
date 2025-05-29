@@ -35,3 +35,21 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+/*Stack memory(Copy milta hai{Primitive datatypes me use hota hai})*/
+
+let myName = "asjad";
+let anotherName = myName;//anotherName ko myNmae ka reference mila hai.
+anotherName = "Another";
+
+/*
+Heap memory non primitive datatypes me use hoti hai(Reference milta hai) 
+*/
+let obj = {
+    name: "AsjadUsmani",
+    email: "asjadusmani@gmail.com"
+}// obj ka reference ban gya heap memory me
+
+obj2 = obj; //obj2 or obj ka reference ek hi ko mila hai jo heap memory me hai.
+
+console.log(obj, obj2);
