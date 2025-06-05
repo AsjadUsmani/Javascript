@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I'm Asjad Usmani!</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    let event;
+    const start = document.getElementById('start');
+    const stop = document.getElementById('stop');
+    start.addEventListener('click', (e) => {
+        event = setInterval(() => {
+        console.log("Asjad", Date.now())
+    }, 1000)
+    });
+
+    stop.addEventListener('click', (e) => {
+        clearInterval(event);
+    });
+</script>
+</html>
