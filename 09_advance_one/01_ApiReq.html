@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h1>I'm Asjad Usmani</h1>
+</body>
+<script>
+    const reqURL = 'https://api.github.com/users/AsjadUsmani';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', reqURL);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            let data = JSON.parse(this.response);
+            console.log(data.followers);
+        }
+    }
+</script>
+</html>
